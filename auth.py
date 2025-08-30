@@ -19,7 +19,7 @@ def send_and_verify_otp(email):
 
     try:
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login("pavithranarul7@gmail.com", "uirm bfkn wmyl olrd")
+        server.login("pavithranarul7@gmail.com", "**** **** ****") #replace with app code
         server.sendmail(msg['From'], [msg['To']], msg.as_string())
         server.quit()
         print("📧 OTP sent to your email.")
